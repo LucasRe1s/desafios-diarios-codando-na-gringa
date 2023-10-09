@@ -22,5 +22,9 @@ Modo complexo:
 
 let arr = [2, 3, 1, 5];
 arr.reverse();
+arr.sort((a,b) => {
+    if(a > b) return -1;
+    if(a < b) return 1;
+})
 
 console.log(arr);
