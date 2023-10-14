@@ -1,0 +1,6 @@
+function converterMetrosEmMilimetros(metros){
+    let metrosMilimetros = metros * 1000;
+    return `O valor equivalente em milimetros é: ${metrosMilimetros}`
+}
+
+console.log(converterMetrosEmMilimetros(25))
