@@ -4,3 +4,18 @@ function converterMetrosEmMilimetros(metros){
 }
 
 console.log(converterMetrosEmMilimetros(25))
+
+function acharItemIgual(numero) {
+    for(let i = 0; i < arr.length; i++) {
+        if(numero == arr[i]) {
+            return `Tem o número ${numero}`;
+        }
+    }
+    return `não tem o numero ${numero}`;
+}
+
+console.log(acharItemIgual(8));
+console.log(acharItemIgual(4));
+console.log(acharItemIgual(9));
+console.log(acharItemIgual(75));
+console.log(acharItemIgual('batata'));s
