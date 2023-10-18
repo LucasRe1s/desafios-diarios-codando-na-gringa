@@ -18,4 +18,13 @@ console.log(acharItemIgual(8));
 console.log(acharItemIgual(4));
 console.log(acharItemIgual(9));
 console.log(acharItemIgual(75));
-console.log(acharItemIgual('batata'));s
+console.log(acharItemIgual('batata'));
+
+const arr = ["nome", "corretora abc", "tipo", "empresa", "negocio", "aluguel e vendas"]
+
+const obj = arr.reduce((acumulador, elementoAtual, index, array) => {
+    if (index % 2 === 0) {
+        acumulador[elementoAtual] = array[index + 1];
+    }
+    return acumulador;
+}, {})
