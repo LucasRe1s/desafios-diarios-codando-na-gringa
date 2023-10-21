@@ -1,74 +1,33 @@
 /*
 # Codando na gringa - desafios
 
-Bom dia!!! Vamos falar um pouco mais sobre arrays?
+Bom dia!!! Bora aprender um conceito novo hoje?
 
-Desafio de hoje:
+Hoje vamos falar de uma estrutura chamada Hash, HashMap, Dicionário, etc.. (o nome varia de linguagem 
+pra linguagem), essa estrutra é basicamente um agrupamento de chave e valor, por exemplo:
 
-1. Aprenda a percorrer elementos de um array - veja o material de apoio
+O hash { nome: 'Jett', idade: 19 } contém as chaves nome e idade com seus respectivos valores
 
-2. Agora que você já sabe percorrer um array, use o operador de igualdade (==) para 
-verificar verifique se nesse array possui algum número (lembrando que dependendo da linguagem 
-o array pode ter vários tipos de dados)
+Desafio de hoje
 
-Exemplo:
+1. Aprenda como a estrutura de hash funciona - veja o material de apoio
+2. Agora que você já sabe como um hash funciona, dado um hash com dados pessoais de um usuário, 
+imprima esses valores na tela
 
-Dado o array [1, 2, 'teste']
-=> deve retornar "não tem o número 4"
+Exemplo: hash = { nome: 'Jett', idade: 19 }
 
-Enquanto:
+Deverá imprimir na tela:
 
-Dado o array [5, 'abacaxi', 4]
-=> deve retornar "tem o número 4"
-
-Modo complexo (para não-iniciantes)
-
-Remova todos os valores do array que forem passados por parametro
+O nome é Jett
+A idade é 19
 
 Material de apoio
 
-Como percorrer um array? (javascript) - https://warcontent.com/metodos-arrays-javascript/
+- O que é a estrutura de hash? - https://www.tutorialspoint.com/python_data_structure/python_hash_table.htm
+
+Obs: para materiais em inglês, basta usar a função "traduzir do seu navegador"
 */
-const arr = [5, 'abacaxi', 4, 7, 9, 3, 55]
 
-function acharNumeroIgual(numero){
-    for(let i =0; i < arr.length; i++){
-        if(numero == arr[i]) {
-            return `Tem o numero ${numero}`;
-        };
-    } 
-    return `Não tem o numero ${numero}`;
-}
-
-// includes
-function acharNumeroIgual(numero, arr) {
-    if (arr.includes(numero)) {
-        return `Tem o número ${numero}`;
-    } else {
-        return `Não tem o número ${numero}`;
-    }
-}
-
-// find
-function acharNumeroIgual(numero, arr) {
-    const encontrado = arr.find(elemento => elemento === numero);
-    if (encontrado !== undefined) {
-        return `Tem o número ${numero}`;
-    } else {
-        return `Não tem o número ${numero}`;
-    }
-}
-
-// indexOf
-function acharNumeroIgual(numero, arr) {
-    if (arr.indexOf(numero) !== -1) {
-        return `Tem o número ${numero}`;
-    } else {
-        return `Não tem o número ${numero}`;
-    }
-}
-
-console.log(acharNumeroIgual(4));
-console.log(acharNumeroIgual(8));
-console.log(acharNumeroIgual('batata'));
-console.log(acharNumeroIgual(9));
+const hash = {nome: 'Lucas', idade: 26}
+console.log("O nome é: " + hash.nome)
+console.log("A idade é: " + hash.idade)

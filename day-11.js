@@ -1,33 +1,33 @@
 /*
 # Codando na gringa - desafios
 
-Bom dia!!! Bora aprender um conceito novo hoje?
-
-Hoje vamos falar de uma estrutura chamada Hash, HashMap, Dicionário, etc.. (o nome varia de linguagem 
-pra linguagem), essa estrutra é basicamente um agrupamento de chave e valor, por exemplo:
-
-O hash { nome: 'Jett', idade: 19 } contém as chaves nome e idade com seus respectivos valores
+Boa tarde!! Vamos falar mais sobre Hash?
 
 Desafio de hoje
 
-1. Aprenda como a estrutura de hash funciona - veja o material de apoio
-2. Agora que você já sabe como um hash funciona, dado um hash com dados pessoais de um usuário, 
-imprima esses valores na tela
+1. Caso não tenha visto/feito o exerício de ontem, veja no material de apoio o que é uma estrutura de Hash
+2. Dado qualquer hash com nome, idade e profissão, mude o valor do hash da profissão para programador 
+e imprima o hash
 
-Exemplo: hash = { nome: 'Jett', idade: 19 }
+Exemplo:
 
-Deverá imprimir na tela:
+hash = { nome: 'Michael', idade: 40, profissao: 'Gerente' }
 
-O nome é Jett
-A idade é 19
+Deve retornar:
+{ nome: 'Michael', idade: 40, profissao: 'Programador' }
+
+Modo complexo (para não-iniciantes)
+
+Receba um array de hashes e mude os dados desses hashs baseado no critério passado por parametro 
+(esse parametro pode ser a combinação de chave e valor para ser verificado no hash e modificá-lo, 
+    caso não exista, adicione esses valores nos hashes)
+
 
 Material de apoio
 
 - O que é a estrutura de hash? - https://www.tutorialspoint.com/python_data_structure/python_hash_table.htm
-
-Obs: para materiais em inglês, basta usar a função "traduzir do seu navegador"
 */
 
-const hash = {nome: 'Lucas', idade: 26}
-console.log("O nome é: " + hash.nome)
-console.log("A idade é: " + hash.idade)
+const hash = {nome: 'Michael', idade: 40, profissao: 'Gerente'}
+hash.profissao = 'Programador'
+console.log(hash)

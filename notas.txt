@@ -28,3 +28,21 @@ const obj = arr.reduce((acumulador, elementoAtual, index, array) => {
     }
     return acumulador;
 }, {})
+
+
+
+
+function obterAno(anos, anoProcurado) {
+    const resultado = anos.find(function(ano) {
+      return ano == anoProcurado
+    })
+    return resultado
+}
+
+function obterAnosImpares(anos) {
+    const resultado = anos.filter((ano) => {
+      let anoImpar = ano % 2 == 1
+      return anoImpar
+    })
+    return resultado
+}

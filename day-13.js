@@ -1,35 +1,55 @@
 /*
 # Codando na gringa - desafios
 
-Boa tarde!! Hoje o exercício vai ser a mistura de dois conceitos Array e Hash
+## Soma dos Números Pares
 
-Desafio de hoje
+### Descrição do Problema
 
-1. Dado o array de Strings: ["nome", "corretora abc", "tipo", "empresa", "negocio", "aluguel e vendas"]
+Escreva um programa que solicite ao usuário um número inteiro positivo e calcule a soma de 
+todos os números pares menores ou iguais a esse número.
 
-2. Transforme esse array em um hash, obs: O array já está disposto na sequencia de chave e valor
+### Exemplo de Entrada
+```
+Digite um número inteiro positivo: 10
+```
 
-Exemplo: para o array informado, o retorno deverá ser o Hash:
+### Exemplo de Saída
+```
+A soma dos números pares até 10 é 30.
+```
 
-=> { nome: "corretora abc", tipo: "empresa", negocio: "aluguel e vendas" }
+### Dicas **[✨](https://emojipedia.org/pt/brilhos)**
 
-Modo complexo (para não-iniciantes)
+Após receber o número, você pode criar um **Array (Vetor)** e depois passar por cada posição 
+do **Array** fazendo a soma dos números pares.
+### Material de Apoio
 
-Receba diferentes arrays da mesma forma (sequência de chave e valor) e torne todos os arrays 
-recebidos em um único hash (se houver chave repetida, manter a que foi adicionada primeiro)
+- [Como somar um array de números em Javascript]
+(https://alexandrecardoso.dev.br/como-somar-um-array-de-numeros-com-o-javascript/)
 
-Material de apoio
-
-- Converter array de Strings em hash (ruby) - https://www.delftstack.com/howto/ruby/ruby-convert-array-to-hash/
+- [Como descobrir se o número é par em programação]
+(https://www.guj.com.br/t/exercicio-de-numeros-pares-em-c/410103)
 */
 
-const arr = ["nome", "corretora abc", "tipo", "empresa", "negocio", "aluguel e vendas"];
 
-const obj = arr.reduce((acumulador, elementoAtual, index, array) => {
-    if(index % 2 == 0) {
-        acumulador[elementoAtual] = array[index +1];
+function somaPares(num) {
+
+    if (num >= 0 ) {
+        let soma = 0;
+        for (let i = 2; i <= num; i += 2) {
+          soma += i;
+        }
+        return soma
     }
-    return acumulador;
-}, {})
-
-console.log(obj);
+}
+/*
+if (num >= 0) {
+  let soma = 0;
+  for (let i = 1; i <= num; i++) {
+    if (i % 2 === 0) {
+      soma += i;
+    }
+  }
+}
+*/
+console.log(somaPares(10))

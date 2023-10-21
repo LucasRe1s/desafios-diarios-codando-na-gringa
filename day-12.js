@@ -1,33 +1,35 @@
 /*
 # Codando na gringa - desafios
 
-Boa tarde!! Vamos falar mais sobre Hash?
+Boa tarde!! Hoje o exercício vai ser a mistura de dois conceitos Array e Hash
 
 Desafio de hoje
 
-1. Caso não tenha visto/feito o exerício de ontem, veja no material de apoio o que é uma estrutura de Hash
-2. Dado qualquer hash com nome, idade e profissão, mude o valor do hash da profissão para programador 
-e imprima o hash
+1. Dado o array de Strings: ["nome", "corretora abc", "tipo", "empresa", "negocio", "aluguel e vendas"]
 
-Exemplo:
+2. Transforme esse array em um hash, obs: O array já está disposto na sequencia de chave e valor
 
-hash = { nome: 'Michael', idade: 40, profissao: 'Gerente' }
+Exemplo: para o array informado, o retorno deverá ser o Hash:
 
-Deve retornar:
-{ nome: 'Michael', idade: 40, profissao: 'Programador' }
+=> { nome: "corretora abc", tipo: "empresa", negocio: "aluguel e vendas" }
 
 Modo complexo (para não-iniciantes)
 
-Receba um array de hashes e mude os dados desses hashs baseado no critério passado por parametro 
-(esse parametro pode ser a combinação de chave e valor para ser verificado no hash e modificá-lo, 
-    caso não exista, adicione esses valores nos hashes)
-
+Receba diferentes arrays da mesma forma (sequência de chave e valor) e torne todos os arrays 
+recebidos em um único hash (se houver chave repetida, manter a que foi adicionada primeiro)
 
 Material de apoio
 
-- O que é a estrutura de hash? - https://www.tutorialspoint.com/python_data_structure/python_hash_table.htm
+- Converter array de Strings em hash (ruby) - https://www.delftstack.com/howto/ruby/ruby-convert-array-to-hash/
 */
 
-const hash = {nome: 'Michael', idade: 40, profissao: 'Gerente'}
-hash.profissao = 'Programador'
-console.log(hash)
+const arr = ["nome", "corretora abc", "tipo", "empresa", "negocio", "aluguel e vendas"];
+
+const obj = arr.reduce((acumulador, elementoAtual, index, array) => {
+    if(index % 2 == 0) {
+        acumulador[elementoAtual] = array[index +1];
+    }
+    return acumulador;
+}, {})
+
+console.log(obj);
