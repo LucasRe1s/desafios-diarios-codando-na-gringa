@@ -1,7 +1,6 @@
 /*
 # Codando na gringa - desafios
 
-
 ### ****Gerador de Senhas Aleatórias****
 
 ### **Descrição do Problema**
@@ -40,3 +39,22 @@ function generatePass () {
 }
 
 console.log(generatePass())
+
+/* Outra forma
+
+const minusculas = Array.from({ length: 26 }, (_, i) => String.fromCharCode(97 + i));
+const maiusculas = Array.from({ length: 26 }, (_, i) => String.fromCharCode(65 + i));
+
+let senha = "";
+
+for (let i = 0; i < 3; i++) {
+  const numero = Math.floor(Math.random() * 10);
+  const maiuscula = maiusculas[Math.floor(Math.random() * 26)];
+  const minuscula = minusculas[Math.floor(Math.random() * 26)];
+
+  senha = senha + numero + maiuscula + minuscula;
+}
+
+console.log(senha);
+
+*/

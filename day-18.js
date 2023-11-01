@@ -1,8 +1,6 @@
 /*
 # Codando na gringa - desafios
 
-# 17° dia (hoje) - 25/10
-
 ### ****Contagem de Números Positivos e Negativos****
 
 ### **Descrição do Problema**
