@@ -6,3 +6,8 @@ devStart.js
 
 mapa.js
 mapa.txt
+
+//day-25-pasta
+node_modules
+package.json
+package-lock.json
