@@ -21,7 +21,7 @@ rl.question('Digite o número da sua escolha: ', (escolha) => {
     if (escolha === '1') {
         console.log('Você se encontra com o Faraó Ramsés II. Ele lhe faz perguntas sobre o futuro....');
     } else if (escolha === '2') {
-        console.log('Você está explorando as pirâmides. Cuidado com as armadilhas!')
+        console.log('Você está explorando as pirâmides. Cuidado com as armadilhas!');
     } else {
         console.log('Opção inválida. Por favor, escolha 1 ou 2.');
     }
